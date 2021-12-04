@@ -1,4 +1,11 @@
-# Your MWA
+# sztulaboratory
+
+## start sztulaboratory
+```
+git clone https://github.com/GrinZero/sztulaboratory.git
+pnpm install
+pnpm run dev
+```
 
 ## Prerequisites
 
