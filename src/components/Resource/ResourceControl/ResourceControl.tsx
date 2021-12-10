@@ -1,26 +1,16 @@
-import React, { useState } from 'react';
-import ResourceForm from './ResourceForm/ResourceForm';
+import React from 'react';
 import ResourceTable from './ResourceTable/ResourceTable';
 import styles from './ResourceControl.module.scss';
+import ResourceMask from './ResourceMask/ResourceMask';
 
-const ResourceControl = () => {
-  const [showSituation, setShowSituation] = useState(false);
-  return (
-    <div className={`w-full flexCol relative`}>
-      {showSituation ? (
-        <div onClick={() => setShowSituation(true)}></div>
-      ) : (
-        <></>
-      )}
-      <div className={`w-full flexCol mt-5`}>
-        <ResourceForm />
-      </div>
-      <div className={`w-full flexCol mt-5`}>
-        <div className={`${styles.table}`}>
-          <ResourceTable />
-        </div>
+const ResourceControl = () => (
+  <div className={`w-full flexCol relative`}>
+    <ResourceMask />
+    <div className={`w-full flexCol mt-8`}>
+      <div className={`${styles.table}`}>
+        <ResourceTable />
       </div>
     </div>
-  );
-};
+  </div>
+);
 export default ResourceControl;

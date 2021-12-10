@@ -76,10 +76,20 @@ main {
 
 .page-container {
   position: relative;
-  left: 14.3rem;
-  width: calc(100vw - 15.4rem);
+  left: 14.2rem;
+  /* --width: calc(100vw - 15.2305rem); */
+  --width: calc(100vw - 14.2rem);
+  width: var(--width);
   min-height: calc(100vh - 3.6rem);
   top: 3.5rem;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,6 +1,6 @@
 interface Resource {
   id: string;
-  laboratoryID: string | null;
+  laboratoryID?: string | null;
   name: string;
   type: string;
   totalNum: number;
@@ -19,4 +19,23 @@ interface ResourceFormItem {
   company: Array<string>;
   type: Array<string>;
 }
-export { Resource, ResourceTable, ResourceFormItem };
+interface ResourceDetail extends Resource {
+  laboratoryName: string;
+}
+interface ResourceRecord {
+  event: string;
+  userName: string;
+  id: string;
+  userID: string;
+  createTime: string;
+  num: string;
+  remain: string;
+}
+
+export {
+  Resource,
+  ResourceTable,
+  ResourceFormItem,
+  ResourceDetail,
+  ResourceRecord,
+};

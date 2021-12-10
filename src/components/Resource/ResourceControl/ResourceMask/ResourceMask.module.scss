@@ -1,0 +1,16 @@
+.fa-angle {
+  border-radius: 0 0 9px 9px;
+  // transform: perspective(2em) rotateX(-20deg);
+}
+.fa-angle-active {
+  transform: perspective(0em) rotateX(-60deg);
+}
+.mask {
+  position: fixed;
+  z-index: 100;
+  width: var(--width);
+}
+.maskBottom {
+  position: absolute;
+  top: 100%;
+}

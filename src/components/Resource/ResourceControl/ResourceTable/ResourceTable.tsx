@@ -207,6 +207,7 @@ const ResourceTable = () => {
   return (
     <Form form={form} component={false}>
       <Table
+        size="middle"
         dataSource={activeSource}
         pagination={{ ...pagination, onChange: cancel }}
         rowKey={record => record.id}

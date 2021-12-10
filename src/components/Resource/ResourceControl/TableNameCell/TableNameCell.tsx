@@ -1,4 +1,5 @@
 import { Image, Popover } from 'antd';
+import { Link } from '@modern-js/runtime/router';
 
 interface TableNameCellProps {
   src: string | undefined;
@@ -12,19 +13,14 @@ const TableNameCell: React.FC<TableNameCellProps> = ({
   text,
   width,
   ...restProps
-}) => {
-  const click = () => {
-    console.error('d');
-  };
-  return (
-    <Popover content={src ? <Image src={src} width={width} key={id} /> : <></>}>
-      <span
-        className={`cursor-pointer hover:text-green-300 transition-colors`}
-        onClick={click}
-        {...restProps}>
-        {text}
-      </span>
-    </Popover>
-  );
-};
+}) => (
+  <Popover content={src ? <Image src={src} width={width} key={id} /> : <></>}>
+    <Link
+      className={`cursor-pointer hover:text-green-300 transition-colors`}
+      to={`/index/resource_detail/${id}`}
+      {...restProps}>
+      {text}
+    </Link>
+  </Popover>
+);
 export default TableNameCell;

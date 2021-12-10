@@ -7,7 +7,8 @@
     "build": "modern build",
     "start": "modern start",
     "new": "modern new",
-    "lint": "modern lint"
+    "lint": "modern lint",
+    "dev:esm": "modern dev --unbundled"
   },
   "engines": {
     "node": ">=14.17.6"
@@ -38,17 +39,21 @@
   ],
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@modern-js/plugin-less": "^1.1.1",
     "@modern-js/plugin-sass": "^1.1.0",
     "@modern-js/runtime": "^1.0.0",
     "antd": "^4.16.13",
+    "axios": "^0.24.0",
     "postcss": "^8.4.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.0",
-    "tailwindcss": "^2.2.19",
-    "@modern-js/plugin-less": "^1.1.1"
+    "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
     "@modern-js/app-tools": "^1.0.0",
@@ -58,7 +63,8 @@
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "del-cli": "^4.0.1",
-    "typescript": "^4"
+    "typescript": "^4",
+    "@modern-js/plugin-unbundle": "^1.1.1"
   },
   "modernConfig": {
     "runtime": {

@@ -1,6 +1,8 @@
 import { Switch, Route, Redirect } from '@modern-js/runtime/router';
 import React from 'react';
+import Laboratory from '../Laboratory/Laboratory';
 import ResourceControl from './ResourceControl/ResourceControl';
+import ResourceDetail from './ResourceDetail/ResourceDetail';
 
 const Resource = () => (
   <div className="page-container">
@@ -9,6 +11,8 @@ const Resource = () => (
         <Redirect from="/index" to="/index/resource_control" />
       </Route>
       <Route path="/index/resource_control" component={ResourceControl} />
+      <Route path="/index/resource_detail/:id" component={ResourceDetail} />
+      <Laboratory />
     </Switch>
   </div>
 );
