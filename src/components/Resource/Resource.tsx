@@ -3,6 +3,7 @@ import React from 'react';
 import Laboratory from '../Laboratory/Laboratory';
 import ResourceControl from './ResourceControl/ResourceControl';
 import ResourceDetail from './ResourceDetail/ResourceDetail';
+import ResourceAdd from './ResourceControl/ResourceAdd/ResourceAdd';
 
 const Resource = () => (
   <div className="page-container">
@@ -12,6 +13,7 @@ const Resource = () => (
       </Route>
       <Route path="/index/resource_control" component={ResourceControl} />
       <Route path="/index/resource_detail/:id" component={ResourceDetail} />
+      <Route path="/index/resource/add" component={ResourceAdd} />
       <Laboratory />
     </Switch>
   </div>

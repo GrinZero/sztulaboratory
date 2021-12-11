@@ -1,4 +1,4 @@
-import { Image, Descriptions } from 'antd';
+import { Image, Descriptions, Skeleton } from 'antd';
 import type { ResourceDetail } from '../../Resource.type';
 
 interface DetailProps {
@@ -6,7 +6,7 @@ interface DetailProps {
 }
 const Detail: React.FC<DetailProps> = ({ source }) => {
   if (!source) {
-    return <></>;
+    return <Skeleton active={true} />;
   }
   return (
     <div className={`w-full`}>

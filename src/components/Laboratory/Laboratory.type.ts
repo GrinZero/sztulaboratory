@@ -5,4 +5,8 @@ interface LaboratoryItem {
   nickName: string;
   resourceNum: number;
 }
-export { LaboratoryItem };
+interface LaboratoryDetail extends LaboratoryItem {
+  otherPeople: Array<string>;
+  laboratoryDetail: string;
+}
+export { LaboratoryItem, LaboratoryDetail };
